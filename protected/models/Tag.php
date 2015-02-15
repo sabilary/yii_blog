@@ -10,6 +10,18 @@
  */
 class Tag extends CActiveRecord
 {
+    // It's used in Post::normalizeTags()
+	public static function array2string($tags)
+	{
+		return implode(', ',$tags);
+	}
+
+    // It's used in Post::normalizeTags()
+	public static function string2array($tags)
+	{
+		return preg_split('/\s*,\s*/',trim($tags),-1,PREG_SPLIT_NO_EMPTY);
+	}
+    
 	/**
 	 * @return string the associated database table name
 	 */
