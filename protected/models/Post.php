@@ -29,6 +29,17 @@ class Post extends CActiveRecord
 	}
     
 	/**
+	 * @return string the URL that shows the detail of the post
+	 */
+	public function getUrl()
+	{
+		return Yii::app()->createUrl('post/view', array(
+			'id'=>$this->id,
+			'title'=>$this->title,
+		));
+	}
+    
+	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
