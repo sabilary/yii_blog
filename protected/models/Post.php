@@ -19,6 +19,10 @@
  */
 class Post extends CActiveRecord
 {
+	const STATUS_DRAFT=1;
+	const STATUS_PUBLISHED=2;
+	const STATUS_ARCHIVED=3;
+    
 	/**
 	 * Normalizes the user-entered tags.
      * Using Tag::array2string() and Tag::string2array()
@@ -37,6 +41,48 @@ class Post extends CActiveRecord
 			'id'=>$this->id,
 			'title'=>$this->title,
 		));
+	}
+
+	/**
+	 * This is invoked before the record is saved.
+	 * @return boolean whether the record should be saved.
+	 */
+	protected function beforeSave()
+	{
+		if(parent::beforeSave())
+		{
+			if($this->isNewRecord)
+			{
+				$this->create_time=$this->update_time=time();
+				$this->author_id=Yii::app()->user->id;
+			}
+			else
+				$this->update_time=time();
+			return true;
+		}
+		else
+			return false;
+	}
+
+	private $_oldTags;
+
+	/**
+	 * This is invoked when a record is populated with data from a find() call.
+	 */
+	protected function afterFind()
+	{
+		parent::afterFind();
+		$this->_oldTags=$this->tags;
+	}
+
+	/**
+	 * This is invoked after the record is saved.
+     * Using Tag::updateFrequency()
+	 */
+	protected function afterSave()
+	{
+		parent::afterSave();
+		Tag::model()->updateFrequency($this->_oldTags, $this->tags);
 	}
     
 	/**

@@ -32,17 +32,31 @@ class PostController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				//'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				//'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
+	}
+
+	/**
+	 * Suggests tags based on the current user input.
+	 * This is called via AJAX when the user is entering the tags input.
+	 */
+	public function actionSuggestTags()
+	{
+		if(isset($_GET['q']) && ($keyword=trim($_GET['q']))!=='')
+		{
+			$tags=Tag::model()->suggestTags($keyword);
+			if($tags!==array())
+				echo implode("\n",$tags);
+		}
 	}
 
 	/**

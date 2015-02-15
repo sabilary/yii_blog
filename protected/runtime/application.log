@@ -1,0 +1,42 @@
+2015/02/15 07:45:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in C:\wamp\www\yii-1.1.16\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.16\framework\web\CController.php(270): CController->missingAction('suggestTags')
+#1 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('suggestTags')
+#2 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 C:\wamp\www\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\yii_blog\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/suggestTags&q=b&limit=10&timestamp=1423982711985
+HTTP_REFERER=http://yii_blog.dev/index.php?r=post/create
+---
+2015/02/15 07:45:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in C:\wamp\www\yii-1.1.16\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.16\framework\web\CController.php(270): CController->missingAction('suggestTags')
+#1 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('suggestTags')
+#2 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 C:\wamp\www\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\yii_blog\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/suggestTags&q=blo&limit=10&timestamp=1423982716229
+HTTP_REFERER=http://yii_blog.dev/index.php?r=post/create
+---
+2015/02/15 07:45:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "suggestTags".' in C:\wamp\www\yii-1.1.16\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii-1.1.16\framework\web\CController.php(270): CController->missingAction('suggestTags')
+#1 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(282): CController->run('suggestTags')
+#2 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('post/suggestTag...')
+#3 C:\wamp\www\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\wamp\www\yii_blog\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/suggestTags&q=blog&limit=10&timestamp=1423982738111
+HTTP_REFERER=http://yii_blog.dev/index.php?r=post/create
+---
+2015/02/15 07:47:05 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\wamp\www\yii_blog\protected\controllers\PostController.php (86)
+in C:\wamp\www\yii_blog\index.php (13)
+2015/02/15 07:47:05 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\wamp\www\yii_blog\protected\controllers\PostController.php (86)
+in C:\wamp\www\yii_blog\index.php (13)
+2015/02/15 07:47:05 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\wamp\www\yii_blog\protected\controllers\PostController.php (86)
+in C:\wamp\www\yii_blog\index.php (13)

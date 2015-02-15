@@ -33,13 +33,20 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'tags'); ?>
-		<?php echo $form->textArea($model,'tags',array('rows'=>6, 'cols'=>50)); ?>
+		<?php $this->widget('CAutoComplete', array(
+			'model'=>$model,
+			'attribute'=>'tags',
+			'url'=>array('suggestTags'),
+			'multiple'=>true,
+			'htmlOptions'=>array('size'=>50),
+		)); ?>
+		<p class="hint">Please separate different tags with commas.</p>
 		<?php echo $form->error($model,'tags'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->dropDownList($model,'status',Lookup::items('PostStatus')); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
