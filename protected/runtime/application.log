@@ -40,3 +40,40 @@ in C:\wamp\www\yii_blog\index.php (13)
 2015/02/15 07:47:05 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
 in C:\wamp\www\yii_blog\protected\controllers\PostController.php (86)
 in C:\wamp\www\yii_blog\index.php (13)
+2015/02/16 13:31:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "about_jquery/index".' in C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('about_jquery/in...')
+#1 C:\wamp\www\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\wamp\www\yii_blog\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=about_jquery/index
+HTTP_REFERER=http://yii_blog.dev/index.php?r=jquery_doc/
+---
+2015/02/16 16:52:59 [error] [exception.CException] exception 'CException' with message 'Property "Jquery_docModule.layouts" is not defined.' in C:\wamp\www\yii-1.1.16\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_blog\protected\modules\jquery_doc\Jquery_docModule.php(17): CComponent->__set('layouts', 'jquery_doc.view...')
+#1 C:\wamp\www\yii-1.1.16\framework\base\CModule.php(90): Jquery_docModule->init()
+#2 C:\wamp\www\yii-1.1.16\framework\YiiBase.php(206): CModule->__construct('jquery_doc', NULL, Array)
+#3 C:\wamp\www\yii-1.1.16\framework\base\CModule.php(282): YiiBase::createComponent('jquery_doc.Jque...', 'jquery_doc', NULL, Array)
+#4 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(337): CModule->getModule('jquery_doc')
+#5 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(276): CWebApplication->createController('jquery_doc/abou...')
+#6 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jquery_doc/abou...')
+#7 C:\wamp\www\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\wamp\www\yii_blog\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=jquery_doc/about_jquery/additional_support
+---
+2015/02/16 16:53:38 [error] [exception.CException] exception 'CException' with message 'Property "Jquery_docModule.layouts" is not defined.' in C:\wamp\www\yii-1.1.16\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii_blog\protected\modules\jquery_doc\Jquery_docModule.php(17): CComponent->__set('layouts', 'jquery_doc.view...')
+#1 C:\wamp\www\yii-1.1.16\framework\base\CModule.php(90): Jquery_docModule->init()
+#2 C:\wamp\www\yii-1.1.16\framework\YiiBase.php(206): CModule->__construct('jquery_doc', NULL, Array)
+#3 C:\wamp\www\yii-1.1.16\framework\base\CModule.php(282): YiiBase::createComponent('jquery_doc.Jque...', 'jquery_doc', NULL, Array)
+#4 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(337): CModule->getModule('jquery_doc')
+#5 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(276): CWebApplication->createController('jquery_doc/abou...')
+#6 C:\wamp\www\yii-1.1.16\framework\web\CWebApplication.php(141): CWebApplication->runController('jquery_doc/abou...')
+#7 C:\wamp\www\yii-1.1.16\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\wamp\www\yii_blog\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php?r=jquery_doc/about_jquery/additional_support
+---

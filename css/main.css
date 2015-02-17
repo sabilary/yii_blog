@@ -227,3 +227,12 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+.hint-text {
+    color: #999;
+}
+
+.ctext-highlighter ol,
+.ctext-highlighter ul {
+    margin-left: 20px;
+}
